@@ -1,0 +1,134 @@
+POST https://example.com/comments HTTP/1.1
+content-type: application/json
+
+{
+    "name": "sample",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
+
+###
+
+GET http://localhost:3000/api/blogs HTTP/1.1
+Authorization: token xxx
+
+###
+
+GET http://localhost:3000/api/users HTTP/1.1
+Authorization: token xxx
+
+###
+
+POST http://localhost:3000/api/users HTTP/1.1
+content-type: application/json
+Authorization: token xxx
+
+{
+    "email": "user2@email.com",
+    "name": "user2"
+}
+
+###
+
+PATCH http://localhost:3000/api/users HTTP/1.1
+content-type: application/json
+Authorization: token xxx
+
+{
+    "userId": "6671538f4b5b1e2f8c224663",
+    "name": "updated user"
+}
+
+###
+
+DELETE http://localhost:3000/api/users?userId=6671538f4b5b1e2f8c224663 HTTP/1.1
+Authorization: token xxx
+
+###
+
+GET http://localhost:3000/api/categories?userId=667154d54b5b1e2f8c22466a HTTP/1.1
+Authorization: token xxx
+
+###
+
+GET http://localhost:3000/api/categories/6671617f4b5b1e2f8c224681?userId=667154d54b5b1e2f8c22466a HTTP/1.1
+Authorization: token xxx
+
+### 
+
+POST http://localhost:3000/api/categories?userId=667154d54b5b1e2f8c22466a HTTP/1.1
+content-type: application/json
+Authorization: token xxx
+
+{
+    "title": "title 2"
+}
+
+###
+
+PATCH http://localhost:3000/api/categories/667156104b5b1e2f8c224671?userId=667154d54b5b1e2f8c22466a HTTP/1.1
+content-type: application/json
+Authorization: token xxx
+
+{
+    "title": "title updated"
+}
+
+###
+
+DELETE http://localhost:3000/api/categories/667156104b5b1e2f8c224671?userId=667154d54b5b1e2f8c22466a HTTP/1.1
+Authorization: token xxx
+
+###
+
+GET http://localhost:3000/api/blogs?userId=667154d54b5b1e2f8c22466a&categoryId=6671617f4b5b1e2f8c224681 HTTP/1.1
+Authorization: token xxx
+
+###
+
+GET http://localhost:3000/api/blogs?userId=667154d54b5b1e2f8c22466a&categoryId=6671617f4b5b1e2f8c224681&keywords=aaa HTTP/1.1
+Authorization: token xxx
+
+###
+
+GET http://localhost:3000/api/blogs?userId=667154d54b5b1e2f8c22466a&categoryId=6671617f4b5b1e2f8c224681&startDate=2023-10-10&endDate=2025-01-01 HTTP/1.1
+Authorization: token xxx
+
+###
+
+GET http://localhost:3000/api/blogs?userId=667154d54b5b1e2f8c22466a&categoryId=6671617f4b5b1e2f8c224681&page=1&limit=2 HTTP/1.1
+Authorization: token xxx
+
+###
+
+GET http://localhost:3000/api/blogs/6671647b4b5b1e2f8c2246a2?userId=667154d54b5b1e2f8c22466a&categoryId=6671617f4b5b1e2f8c224681 HTTP/1.1
+Authorization: token xxx
+
+### 
+
+POST http://localhost:3000/api/blogs?userId=667154d54b5b1e2f8c22466a&categoryId=6671617f4b5b1e2f8c224681 HTTP/1.1
+content-type: application/json
+Authorization: token xxx
+
+{
+    "title": "blog title 3",
+    "description": "some more blog data aaa"
+}
+
+###
+
+PATCH http://localhost:3000/api/blogs/6671647b4b5b1e2f8c2246a2?userId=667154d54b5b1e2f8c22466a HTTP/1.1
+content-type: application/json
+Authorization: token xxx
+
+{
+    "title": "title updated 123",
+    "description": "updated as well"
+}
+
+###
+
+DELETE http://localhost:3000/api/blogs/6671647b4b5b1e2f8c2246a2?userId=667154d54b5b1e2f8c22466a HTTP/1.1
+Authorization: token xxx
+
+###
+
